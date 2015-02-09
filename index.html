@@ -1,31 +1,161 @@
 <!DOCTYPE html>
-<html>
+<!--
+
+ This site is going to be implemented as a one-page website with all of the
+ necessary information, I don't see it beneficial to lay it out any other way.
+
+ I'll be using bootstrap to align everything so that it's mobile-friendly.
+
+=======================
+|        Navbar       |
+=======================
+|                     |
+|      Logo Here      |
+|                     |
+=======================
+|                     |
+|    About Section    |
+|                     |
+=======================
+|                     |
+|     Mini-gallery    |
+|                     |
+=======================
+|                     |
+|   Contact Section   |
+|     (with form)     |
+=======================
+|     Links/info      |
+=======================
+
+-->
+<html lang="en">
   <head>
-    <title>Creative Concrete Ltd.</title>
-    <!-- YUI Reset CSS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Creative Concrete</title>
+
+    <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <style>
-      html {
-        font-family:helvetica, sans-serif;
-      }
-      p {
-        margin:10px;
-      }
-      #logo {
-        background-image:url("images/logo.png");
-        background-repeat:no-repeat;
-        background-position:center center;
-        height:319px;
-        width:500px;
-        margin:20px auto;
-      }
-      .center {
-        text-align:center;
-      }
-    </style>
+
+    <!-- Skel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+
+    <!-- Open Sans -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Scrolly -->
+    <script src="js/jquery.scrolly.min.js"></script>
+
+    <!-- Skel JS -->
+    <script src="js/skel.min.js"></script>
+
+    <script src="js/init.js"></script>
   </head>
+
   <body>
-    <div id="logo"></div>
-    <p class="center">This is a temporary page while the website is constructed.</p>
+
+    <!-- Navigation links -->
+    <div id="navbar">
+      <h4>Creative Concrete Ltd.</h4>
+      <nav>
+        <a href="#about" class="scrolly">about</a>
+        <a href="#contact" class="scrolly">contact</a>
+      </nav>
+    </div>
+
+    <!-- header -->
+    <section id="header">
+      <header>
+        <div id="background">
+      </header>
+      <footer>
+        <!--<p id="tagline">slogan goes here</p>-->
+      </footer>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="white">
+      <header>
+        <div class="container">
+        <h1>About us</h1>
+          <p>Creative concrete is focused about making the most out of your
+            concrete projects by custom-making each project specifically for
+            you.</p>
+          <p>Currently we serve the Westman region in Southern Manitoba
+            including Minnedosa, Souris, Brandon, Carberry, Glenboro, Neepawa,
+            Wawanesa and Waywayseecappo, and select service to other regions
+            upon special request.</p>
+        </div>
+      </header>
+    </section>
+
+    <!-- mini-gallery -->
+    <!--
+    <section>
+      <header>
+        <h1>Gallery</h1>
+        <p>View some of the past decorative concrete services in the gallery.</p>
+      </header>
+    </section>
+    -->
+
+    <!-- contact -->
+    <section id="contact">
+      <header>
+        <div class="container">
+          <h1>Contact</h1>
+          <p>Fill out the form below to request a quote or get information about
+            our products and services</p>
+        </div>
+      </header>
+      <div class="container">
+        <form>
+          <div class="row">
+            <div class="six columns">
+              <label for="email">Your email</label>
+              <input class="u-full-width" name="email" type="email" placeholder="your@email.com">
+            </div>
+            <div class="six columns">
+              <label for="exampleRecipientInput">Reason for contacting</label>
+              <select class="u-full-width">
+                <option value="question">Question</option>
+                <option value="quote">Quote</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <label for="message">Message</label>
+          <textarea class="u-full-width" placeholder="Hi Henry..." name="message"></textarea>
+          <input class="button-primary" type="submit" value="Submit" onclick="alert('Oops\n\nThis form isn\'t yet functional. Give us a few days to get this sorted!'); return false;">
+        </form>
+      </div>
+    </section>
+
+    <!-- credits and links -->
+    <section id="credits">
+      <div class="container">
+        <!--<div class="row">
+          <div class="twelve columns right">
+            <p>Minnedosa, Manitoba<br>Phone: (204) XXX-XXXX</p>
+          </div>
+        </div>-->
+        <div class="row">
+          <p class="twelve columns center">
+            Website Design by <a href="http://abefehr.com/">Abe Fehr</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
