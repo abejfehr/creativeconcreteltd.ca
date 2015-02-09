@@ -1,31 +1,111 @@
 <!DOCTYPE html>
-<html>
+<!--
+
+ This site is going to be implemented as a one-page website with all of the
+ necessary information, I don't see it beneficial to lay it out any other way.
+
+ I'll be using bootstrap to align everything so that it's mobile-friendly.
+
+=======================
+|        Navbar       |
+=======================
+|                     |
+|      Logo Here      |
+|                     |
+=======================
+|                     |
+|    About Section    |
+|                     |
+=======================
+|                     |
+|     Mini-gallery    |
+|                     |
+=======================
+|                     |
+|   Contact Section   |
+|     (with form)     |
+=======================
+|     Links/info      |
+=======================
+
+-->
+<html lang="en">
   <head>
-    <title>Creative Concrete Ltd.</title>
-    <!-- YUI Reset CSS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Creative Concrete</title>
+
+    <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <style>
-      html {
-        font-family:helvetica, sans-serif;
-      }
-      p {
-        margin:10px;
-      }
-      #logo {
-        background-image:url("images/logo.png");
-        background-repeat:no-repeat;
-        background-position:center center;
-        height:319px;
-        width:500px;
-        margin:20px auto;
-      }
-      .center {
-        text-align:center;
-      }
-    </style>
+
+    <!-- Skel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+
+    <!-- Open Sans -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/style.css" />
+
   </head>
+
   <body>
-    <div id="logo"></div>
-    <p class="center">This is a temporary page while the website is constructed.</p>
+
+  <!-- header -->
+  <section id="header">
+    <header>
+      <div id="background">
+    </header>
+    <footer>
+      <p id="tagline">slogan goes here</p>
+    </footer>
+  </section>
+
+  <!-- about -->
+  <section>
+    <header>
+      <h1>About us</h1>
+      <p>Creative concrete is all about making the most out of your concrete
+      projects by making them in a way that reflects who you are.</p>
+      <p>Creative Concrete currently serves the Westman region in Southern
+        Manitoba including Minnedosa, Souris, Brandon, Carberry, Glenboro,
+        Neepawa, Wawanesa and Waywayseecappo, and service to other regions by
+        request.</p>
+    </header>
+  </section>
+
+  <!-- mini-gallery -->
+  <section>
+    <header>
+      <h1>Gallery</h1>
+      <p>View some of the past decorative concrete services in the gallery.</p>
+    </header>
+  </section>
+
+  <!-- contact -->
+  <section>
+    <header>
+      <h1>Contact</h1>
+      <p>Fill out the form below to request a quote or get information about our
+        products and services</p>
+      <form>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email address" />
+        <input type="tel" placeholder="Phone number (optional)" />
+        <textarea placeholder="Message"></textarea>
+        <input type="submit" />
+      </form>
+    </header>
+  </section>
+
+  <!-- credits and links -->
+  <section>
+    <div id="container">
+      Website Design by <a href="http://abefehr.com/">Abe Fehr</a>.
+    </div>
+  </section>
+
   </body>
 </html>

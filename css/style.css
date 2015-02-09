@@ -1,0 +1,26 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* header */
+#header {
+  height:400px;
+}
+
+#background {
+  margin:0 auto;
+  background-image:url(../images/logo.png);
+  height:300px;
+  width:300px;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+
+header {
+  text-align:center;
+}
+
+footer {
+  text-align:center;
+}
