@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <!--
 
- This site is going to be implemented as a one-page website with all of the
- necessary information, I don't see it beneficial to lay it out any other way.
-
- I'll be using bootstrap to align everything so that it's mobile-friendly.
+ This site is implemented as a one-page website with all of the necessary
+ information.
 
 =======================
 |        Navbar       |
@@ -32,9 +30,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Custom concrete designed to fit your needs; serving the Southern Manitoba Westman region.">
     <title>Creative Concrete</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
@@ -57,6 +56,7 @@
     <!-- Skel JS -->
     <script src="js/skel.min.js"></script>
 
+    <!-- Init script for the site -->
     <script src="js/init.js"></script>
   </head>
 
@@ -74,7 +74,7 @@
     <!-- header -->
     <section id="header">
       <header>
-        <div id="background">
+        <div id="logo">
       </header>
       <footer>
         <!--<p id="tagline">slogan goes here</p>-->
@@ -121,11 +121,11 @@
           <div class="row">
             <div class="six columns">
               <label for="email">Your email</label>
-              <input class="u-full-width" name="email" type="email" placeholder="your@email.com">
+              <input class="u-full-width" name="_replyto" type="email" placeholder="your@email.com">
             </div>
             <div class="six columns">
               <label for="exampleRecipientInput">Reason for contacting</label>
-              <select class="u-full-width">
+              <select name="_subject" class="u-full-width">
                 <option value="question">Question</option>
                 <option value="quote">Quote</option>
                 <option value="other">Other</option>
@@ -134,7 +134,8 @@
           </div>
           <label for="message">Message</label>
           <textarea class="u-full-width" placeholder="Hi Henry..." name="message"></textarea>
-          <input class="button-primary" type="submit" value="Submit" onclick="alert('Oops\n\nThis form isn\'t yet functional. Give us a few days to get this sorted!'); return false;">
+          <input type="text" name="_gotcha" style="display:none" />
+          <input class="button-primary" type="button" value="Submit" onclick="sendEmail();" />
         </form>
       </div>
     </section>

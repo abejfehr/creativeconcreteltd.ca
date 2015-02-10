@@ -1,23 +1,24 @@
+/**
+ * creativeconcreteltd.ca
+ *
+ * The CSS in this file is organized into several sections:
+ * - HTML elements - styles for regular tags
+ * - Special page sections - styles for very specific sections
+ * - Custom classes - things that can be reused
+ */
+
+
+
+/**
+ * HTML elements
+ */
 body {
   font-family: 'Open Sans', sans-serif;
   background-color:#eee;
 }
 
-#header {
-  background-image:url(../images/header-dark.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
-  padding:100px 0;
-}
-
-#background {
-  margin:0 auto;
-  background-image:url(../images/logo-light.png);
-  height:300px;
-  width:300px;
-  background-position:center center;
-  background-repeat:no-repeat;
-  background-size:contain;
+section {
+  padding:35px 0;
 }
 
 header {
@@ -28,45 +29,12 @@ footer {
   text-align:center;
 }
 
-.container {
-  max-width:850px;
-}
-
 a {
   text-decoration:none;
 }
 
 a:hover {
   text-decoration:underline;
-}
-
-#credits {
-  padding:50px 0;
-  background-color:#555;
-  color:#999;
-  box-shadow: inset 1px 7px 26px 0px rgba(46,46,46,1);
-}
-
-#credits a {
-  color:#888;
-}
-
-#navbar {
-  position:fixed;
-  width:100%;
-  padding:10px 0;
-  top:0;
-  background-color:rgba(0,0,0,0.5);
-  z-index:999;
-  height:60px;
-}
-
-#navbar h4 {
-  display:inline;
-  float:left;
-  color:#fff;
-  margin:0;
-  padding:0 15px;
 }
 
 nav {
@@ -87,12 +55,68 @@ nav a:hover {
   text-decoration:none;
 }
 
-.white {
-    background-color:#fff;
+
+
+/**
+ * Special page sections
+ */
+ #navbar {
+   position:fixed;
+   width:100%;
+   padding:10px 0;
+   top:0;
+   background-color:rgba(0,0,0,0.5);
+   z-index:999;
+   height:40px;
+ }
+
+ #navbar h4 {
+   display:inline;
+   float:left;
+   color:#fff;
+   margin:0;
+   padding:0 15px;
+ }
+
+#header {
+  background-image:url(../images/header-dark.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding:100px 0;
 }
 
-section {
-  padding:35px 0;
+#logo {
+  margin:0 auto;
+  background-image:url(../images/logo-light.png);
+  height:300px;
+  width:300px;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+
+#credits {
+  padding:50px 0;
+  background-color:#555;
+  color:#999;
+  box-shadow: inset 1px 7px 26px 0px rgba(46,46,46,1);
+}
+
+#credits a {
+  color:#888;
+}
+
+
+
+/**
+ * Custom classes
+ */
+.container {
+  max-width:850px;
+}
+
+.white {
+    background-color:#fff;
 }
 
 .right {
@@ -102,7 +126,3 @@ section {
 .center {
   text-align:center;
 }
-
-/* Don't show shadows when selecting text */
-::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
-::selection { background: #5af; color: #fff; text-shadow: none; }
