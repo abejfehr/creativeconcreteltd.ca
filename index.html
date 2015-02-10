@@ -121,11 +121,11 @@
           <div class="row">
             <div class="six columns">
               <label for="email">Your email</label>
-              <input class="u-full-width" name="email" type="email" placeholder="your@email.com">
+              <input class="u-full-width" name="_replyto" type="email" placeholder="your@email.com">
             </div>
             <div class="six columns">
               <label for="exampleRecipientInput">Reason for contacting</label>
-              <select class="u-full-width">
+              <select name="_subject" class="u-full-width">
                 <option value="question">Question</option>
                 <option value="quote">Quote</option>
                 <option value="other">Other</option>
@@ -134,7 +134,8 @@
           </div>
           <label for="message">Message</label>
           <textarea class="u-full-width" placeholder="Hi Henry..." name="message"></textarea>
-          <input class="button-primary" type="submit" value="Submit" onclick="alert('Oops\n\nThis form isn\'t yet functional. Give us a few days to get this sorted!'); return false;">
+          <input type="text" name="_gotcha" style="display:none" />
+          <input class="button-primary" type="button" value="Submit" onclick="sendEmail();" />
         </form>
       </div>
     </section>

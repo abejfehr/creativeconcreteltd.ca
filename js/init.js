@@ -8,12 +8,32 @@
 
   $(function() {
 
-    var	$window = $(window),
-      $body = $('body');
+    var	$window = $(window);
+    var $body = $('body');
 
     // Scrolly links.
-      $('.scrolly').scrolly();
-
+    $('.scrolly').scrolly();
   });
 
 })(jQuery);
+
+var sendEmail = function() {
+  $.ajax({
+    url: "//formspree.io/henry@creativeconcreteltd.ca",
+    method: "POST",
+    data: {
+      _replyto: $("input[name='_replyto']").val(),
+      message: $("textarea[name='message']").val(),
+      _subject: $("select[name='_subject']").val(),
+      _gotcha: $("input[name='_gotcha'").val()
+    },
+    dataType: "json"
+  });
+
+  // Clear the fields after it's been sent
+  alert('Your message was sent!');
+  $("input[name='_replyto']").val('');
+  $("textarea[name='message']").val('');
+  $("select[name='_subject']").val('');
+  $("input[type='button']").attr('disabled', true);
+}
