@@ -13,7 +13,18 @@
 
     // Scrolly links.
     $('.scrolly').scrolly();
+
+    // Gallery images
+    $('#gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: {
+        enabled: true
+      }
+    });
+
   });
+
 
 })(jQuery);
 
@@ -36,4 +47,16 @@ var sendEmail = function() {
   $("textarea[name='message']").val('');
   $("select[name='_subject']").val('');
   $("input[type='button']").attr('disabled', true);
-}
+};
+
+
+jQuery(document).scroll(function() {
+    if (jQuery(this).scrollTop() > 175) {
+        jQuery('#menu').css('position','fixed');
+        jQuery('#menu').css('top','0');
+    }
+    else {
+        jQuery('#menu').css('position','relative');
+        jQuery('#menu').css('top','');
+    }
+});

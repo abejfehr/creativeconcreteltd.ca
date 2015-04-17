@@ -1,32 +1,4 @@
 <!DOCTYPE html>
-<!--
-
- This site is implemented as a one-page website with all of the necessary
- information.
-
-=======================
-|        Navbar       |
-=======================
-|                     |
-|      Logo Here      |
-|                     |
-=======================
-|                     |
-|    About Section    |
-|                     |
-=======================
-|                     |
-|     Mini-gallery    |
-|                     |
-=======================
-|                     |
-|   Contact Section   |
-|     (with form)     |
-=======================
-|     Links/info      |
-=======================
-
--->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -35,90 +7,111 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <!-- Reset CSS -->
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-
-    <!-- Skel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
-
     <!-- Open Sans -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="/css/responsive.css" media="all and (max-width: 1100px)" />
+
+    <!-- Magnific stylesheet -->
+    <link rel="stylesheet" href="/css/magnific-popup.css" />
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <!-- Scrolly -->
-    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
 
     <!-- Skel JS -->
-    <script src="js/skel.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+
+    <!-- Magnific responsive lightbox plugin -->
+    <script src="/js/jquery.magnific-popup.min.js"></script>
 
     <!-- Init script for the site -->
-    <script src="js/init.js"></script>
+    <script src="/js/init.js"></script>
+
   </head>
 
   <body>
 
-    <!-- Navigation links -->
-    <div id="navbar">
-      <h4>Creative Concrete Ltd.</h4>
-      <nav>
-        <a href="#about" class="scrolly">about</a>
-        <a href="#contact" class="scrolly">contact</a>
-      </nav>
-    </div>
+    <a name="about" />
+
+    <nav>
+      <div id="menuSpacing">
+      </div>
+      <div id="menu">
+        <div class="container">
+          <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#gallery" class="scrolly">gallery</a></li>
+            <li><a href="#contact" class="scrolly">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="logo" class="shadowed"></div>
 
     <!-- header -->
     <section id="header">
-      <header>
-        <div id="logo">
-      </header>
-      <footer>
-        <!--<p id="tagline">slogan goes here</p>-->
-      </footer>
-    </section>
-
-    <!-- about -->
-    <section id="about" class="white">
-      <header>
-        <div class="container">
-        <h1>About us</h1>
-          <p>Creative Concrete is focused on making the most out of your
-            concrete projects by custom-making each project specifically for
-            you.
-          </p>
-          <p>Currently we serve the Westman region in Southern Manitoba
-            including Minnedosa, Souris, Brandon, Carberry, Glenboro, Neepawa,
-            Wawanesa and Waywayseecappo, and select service to other regions
-            upon special request.
-          </p>
-          <img style="opacity:0.75; width:200px;" src="images/logix.png" />
-        </div>
-      </header>
-    </section>
-
-    <!-- mini-gallery -->
-    <!--<section>
-      <header>
-        <h1>Gallery</h1>
-        <p>View some of the past decorative concrete services in the gallery.</p>
-      </header>
-      <div class="row">
-        <article class="6u 12u$(xsmall) gallery-item">
-          <a href="http://abefehr.com/parity/" class="thumb"><img src="images/thumbs/parity.jpg" alt="" /></a>
-          <h3>Steps</h3>
-          <p>Other thing</p>
-        </article>
-        <article class="6u$ 12u$(xsmall) gallery-item">
-          <a href="http://abefehr.com/cubify/" class="thumb"><img src="images/thumbs/cubify.jpg" alt="" /></a>
-          <h3>Cubify</h3>
-          <p>Create beautiful cube mosaics, easily</p>
-        </article>
+      <div class="container">
+        <p>Creative Concrete is focused on making the most out of your concrete projects by custom-making each project specifically for you.</p>
+        <p>Currently we serve the Westman region in Southern Manitoba including Minnedosa, Souris, Brandon, Carberry, Glenboro, Neepawa, Wawanesa and Waywayseecappo, and select service to other regions upon special request.</p>
+        <button type="button" href="#gallery" class="scrolly">See our work</button>
       </div>
-    </section>-->
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <h1>Gallery</h1>
+        <ul>
+          <li><a alt="Beautiful concrete bathroom vanity countertop" href="images/hi-res/bathroom_vanity_concrete_countertop_beautiful.jpg"><img src="images/thumbs/bathroom_vanity_concrete_countertop_beautiful.jpg"></a></li>
+          <li><a alt="Beautiful concrete marble bathroom vanity sink" href="images/hi-res/beautiful_concrete_marble_bathroom_vanity_sink.jpg"><img src="images/thumbs/beautiful_concrete_marble_bathroom_vanity_sink.jpg"></a></li>
+          <li><a alt="Beautiful stamped decorative concrete sidewalk" href="images/hi-res/beautiful_stamped_decorative_concrete_sidewalk.jpg"><img src="images/thumbs/beautiful_stamped_decorative_concrete_sidewalk.jpg"></a></li>
+          <li><a alt="Black concrete steps" href="images/hi-res/black_concrete_steps.jpg"><img src="images/thumbs/black_concrete_steps.jpg"></a></li>
+          <li><a alt="Black countertop fresh out of mold" href="images/hi-res/black_countertop_fresh_out_of_mold.jpg"><img src="images/thumbs/black_countertop_fresh_out_of_mold.jpg"></a></li>
+          <li><a alt="Concrete countertop kitchen sink" href="images/hi-res/concrete_countertop_kitchen_sink.jpg"><img src="images/thumbs/concrete_countertop_kitchen_sink.jpg"></a></li>
+          <li><a alt="Concrete shower drain" href="images/hi-res/concrete_shower_drain.jpg"><img src="images/thumbs/concrete_shower_drain.jpg"></a></li>
+          <li><a alt="Dark concrete steps" href="images/hi-res/dark_concrete_steps.jpg"><img src="images/thumbs/dark_concrete_steps.jpg"></a></li>
+          <li><a alt="Dark stamped driveway decorative concrete" href="images/hi-res/dark_stamped_driveway_decorative_concrete.jpg"><img src="images/thumbs/dark_stamped_driveway_decorative_concrete.jpg"></a></li>
+          <li><a alt="Decorative concrete art dolphin house numbers 224" href="images/hi-res/decorative_concrete_art_dolphin_house_numbers_224.jpg"><img src="images/thumbs/decorative_concrete_art_dolphin_house_numbers_224.jpg"></a></li>
+          <li><a alt="Decorative concrete art house_numbers 215" href="images/hi-res/decorative_concrete_art_house_numbers_215.jpg"><img src="images/thumbs/decorative_concrete_art_house_numbers_215.jpg"></a></li>
+          <li><a alt="Decorative concrete black steps_with lip" href="images/hi-res/decorative_concrete_black_steps_with_lip.jpg"><img src="images/thumbs/decorative_concrete_black_steps_with_lip.jpg"></a></li>
+          <li><a alt="Decorative concrete compass inlay for driveway" href="images/hi-res/decorative_concrete_compass_inlay_for_driveway.jpg"><img src="images/thumbs/decorative_concrete_compass_inlay_for_driveway.jpg"></a></li>
+          <li><a alt="Decorative concrete driveway" href="images/hi-res/decorative_concrete_driveway.jpg"><img src="images/thumbs/decorative_concrete_driveway.jpg"></a></li>
+          <li><a alt="Decorative concrete logo" href="images/hi-res/decorative_concrete_logo.jpg"><img src="images/thumbs/decorative_concrete_logo.jpg"></a></li>
+          <li><a alt="Decorative stamped concrete deck steps" href="images/hi-res/decorative_stamped_concrete_deck_steps.jpg"><img src="images/thumbs/decorative_stamped_concrete_deck_steps.jpg"></a></li>
+          <li><a alt="Decorative stamped concrete steps with lights_off" href="images/hi-res/decorative_stamped_concrete_steps_with_lights_off.jpg"><img src="images/thumbs/decorative_stamped_concrete_steps_with_lights_off.jpg"></a></li>
+          <li><a alt="Decorative stamped concrete steps with lights_on" href="images/hi-res/decorative_stamped_concrete_steps_with_lights_on.jpg"><img src="images/thumbs/decorative_stamped_concrete_steps_with_lights_on.jpg"></a></li>
+          <li><a alt="Driveway" href="images/hi-res/driveway.jpg"><img src="images/thumbs/driveway.jpg"></a></li>
+          <li><a alt="European fan decorative stamped concrete firepit" href="images/hi-res/european_fan_decorative_stamped_concrete_firepit.jpg"><img src="images/thumbs/european_fan_decorative_stamped_concrete_firepit.jpg"></a></li>
+          <li><a alt="Exposed aggregate concrete driveway" href="images/hi-res/exposed_aggregate_concrete_driveway.jpg"><img src="images/thumbs/exposed_aggregate_concrete_driveway.jpg"></a></li>
+          <li><a alt="Exposed aggregate concrete front step" href="images/hi-res/exposed_aggregate_concrete_front_step.jpg"><img src="images/thumbs/exposed_aggregate_concrete_front_step.jpg"></a></li>
+          <li><a alt="Exposed aggregate concrete patio with table" href="images/hi-res/exposed_aggregate_concrete_patio_table.jpg"><img src="images/thumbs/exposed_aggregate_concrete_patio_table.jpg"></a></li>
+          <li><a alt="Exposed aggregate winding concrete sidewalk" href="images/hi-res/exposed_aggregate_winding_concrete_sidewalk.jpg"><img src="images/thumbs/exposed_aggregate_winding_concrete_sidewalk.jpg"></a></li>
+          <li><a alt="Fancy decorative concrete steps" href="images/hi-res/fancy_decorative_concrete_steps.jpg"><img src="images/thumbs/fancy_decorative_concrete_steps.jpg"></a></li>
+          <li><a alt="Flagstone stamped concrete patio" href="images/hi-res/flagstone_stamped_concrete_patio.jpg"><img src="images/thumbs/flagstone_stamped_concrete_patio.jpg"></a></li>
+          <li><a alt="Flagstone stamped concrete sidewalk" href="images/hi-res/flagstone_stamped_concrete_sidewalk.jpg"><img src="images/thumbs/flagstone_stamped_concrete_sidewalk.jpg"></a></li>
+          <li><a alt="Leaves decorative concrete step" href="images/hi-res/leaves_decorative_concrete_step.jpg"><img src="images/thumbs/leaves_decorative_concrete_step.jpg"></a></li>
+          <li><a alt="Marble concrete vanity countertop" href="images/hi-res/marble_concrete_vanity_countertop.jpg"><img src="images/thumbs/marble_concrete_vanity_countertop.jpg"></a></li>
+          <li><a alt="MP logo colored in concrete" href="images/hi-res/mp_logo_colored_in_concrete.jpg"><img src="images/thumbs/mp_logo_colored_in_concrete.jpg"></a></li>
+          <li><a alt="Red stamped decorative concrete front_door driveway" href="images/hi-res/red_stamped_decorative_concrete_front_door_driveway.jpg"><img src="images/thumbs/red_stamped_decorative_concrete_front_door_driveway.jpg"></a></li>
+          <li><a alt="Red stamped decorative concrete sidewalk" href="images/hi-res/red_stamped_decorative_concrete_sidewalk.jpg"><img src="images/thumbs/red_stamped_decorative_concrete_sidewalk.jpg"></a></li>
+          <li><a alt="Relief edges concrete countertop finished" href="images/hi-res/relief_edges_concrete_countertop_finished.jpg"><img src="images/thumbs/relief_edges_concrete_countertop_finished.jpg"></a></li>
+          <li><a alt="Seashell ocean themed concrete countertop vanity" href="images/hi-res/seashell_ocean_themed_concrete_countertop_vanity.jpg"><img src="images/thumbs/seashell_ocean_themed_concrete_countertop_vanity.jpg"></a></li>
+          <li><a alt="Stamped concrete decorative patio with table" href="images/hi-res/stamped_concrete_decorative_patio_with_table.jpg"><img src="images/thumbs/stamped_concrete_decorative_patio_with_table.jpg"></a></li>
+          <li><a alt="Stamped concrete sidewalk backyard" href="images/hi-res/stamped_concrete_sidewalk_backyard.jpg"><img src="images/thumbs/stamped_concrete_sidewalk_backyard.jpg"></a></li>
+          <li><a alt="Stamped decorative concrete firepit" href="images/hi-res/stamped_decorative_concrete_firepit.jpg"><img src="images/thumbs/stamped_decorative_concrete_firepit.jpg"></a></li>
+          <li><a alt="Stamped exposed concrete driveway" href="images/hi-res/stamped_exposed_concrete_driveway.jpg"><img src="images/thumbs/stamped_exposed_concrete_driveway.jpg"></a></li>
+          <li><a alt="White concrete countertop stones" href="images/hi-res/white_concrete_countertop_stones.jpg"><img src="images/thumbs/white_concrete_countertop_stones.jpg"></a></li>
+          <li><a alt="Wood plank colored stamped concrete firepit" href="images/hi-res/wood_plank_colored_stamped_concrete_firepit.jpg"><img src="images/thumbs/wood_plank_colored_stamped_concrete_firepit.jpg"></a></li>
+          <li><a alt="Wood plank decorative concrete stamped backyard" href="images/hi-res/wood_plank_decorative_concrete_stamped_backyard.jpg"><img src="images/thumbs/wood_plank_decorative_concrete_stamped_backyard.jpg"></a></li>        </ul>
+        <button type="button" href="#contact" class="scrolly">Interested?</button>
+      </div>
+    </section>
 
     <!-- contact -->
     <section id="contact">
@@ -156,18 +149,26 @@
     <!-- credits and links -->
     <section id="credits">
       <div class="container">
-        <!--<div class="row">
-          <div class="twelve columns right">
-            <p>Minnedosa, Manitoba<br>Phone: (204) XXX-XXXX</p>
-          </div>
-        </div>-->
         <div class="row">
+          <img src="/images/logixLogo.png">
           <p class="twelve columns center">
             Website Design by <a href="http://abefehr.com/">Abe Fehr</a>.
           </p>
         </div>
       </div>
     </section>
+
+    <!-- Google Analytics Tracking Code -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61894354-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
   </body>
 </html>
