@@ -32,7 +32,7 @@ module.exports = (grunt) ->
           cwd: 'images/hi-res/'
           src: ['**/*.{png,jpg,gif}']
           dest: 'images/hi-res/'
-        ]
+        , 'images/headerBG.jpg': 'images/headerBG.jpg']
 
     watch:
       sass:
