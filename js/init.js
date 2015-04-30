@@ -23,6 +23,14 @@
       }
     });
 
+    $('.gallery-thumb').on('click', function(event) {
+      ga('send', 'event', 'button', 'click', 'gallery-thumbs', $(this).attr('href'));
+    });
+
+    $('.logix-link').on('click', function(event) {
+      ga('send', 'event', 'button', 'click', 'outbound-links', 'logix');
+    });
+
   });
 
 
@@ -49,7 +57,6 @@ var sendEmail = function() {
   $("input[type='button']").attr('disabled', true);
 };
 
-
 jQuery(document).scroll(function() {
     if (jQuery(this).scrollTop() > 175) {
         jQuery('#menu').css('position','fixed');
@@ -60,3 +67,4 @@ jQuery(document).scroll(function() {
         jQuery('#menu').css('top','');
     }
 });
+
