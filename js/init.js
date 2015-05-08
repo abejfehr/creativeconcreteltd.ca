@@ -44,7 +44,7 @@ var sendEmail = function() {
       _replyto: $("input[name='_replyto']").val(),
       message: $("textarea[name='message']").val(),
       _subject: $("select[name='_subject']").val(),
-      _gotcha: $("input[name='_gotcha'").val()
+      _gotcha: $("input[name='_gotcha']").val()
     },
     dataType: "json"
   });
