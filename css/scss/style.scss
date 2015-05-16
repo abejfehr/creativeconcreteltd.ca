@@ -4,6 +4,10 @@
 /* Skel */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css);
 
+.center {
+  text-align:center;
+}
+
 /**
  * HTML elements
  */
@@ -100,7 +104,6 @@ body {
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
   }
 
-
   #header {
     background-image:url(../images/headerBG.jpg);
     background-repeat:no-repeat;
@@ -124,6 +127,24 @@ body {
       margin:10px;
       border:2px solid #3f3f3f;
     }
+
+    label {
+      color:#ccc;
+      font-weight:lighter;
+      display:inline;
+    }
+
+    a {
+      color:#fff;
+      display:inline;
+      text-decoration:none;
+    }
+
+    a:hover {
+      color:#fff;
+      font-weight:normal;
+    }
+
   }
 
   #gallery {

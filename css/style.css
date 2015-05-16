@@ -2,6 +2,9 @@
 @import url(http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css);
 /* Skel */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css);
+.center {
+  text-align: center; }
+
 /**
  * HTML elements
  */
@@ -90,6 +93,17 @@ body {
       padding: 5px 15px;
       margin: 10px;
       border: 2px solid #3f3f3f; }
+    body #header label {
+      color: #ccc;
+      font-weight: lighter;
+      display: inline; }
+    body #header a {
+      color: #fff;
+      display: inline;
+      text-decoration: none; }
+    body #header a:hover {
+      color: #fff;
+      font-weight: normal; }
   body #gallery {
     background-color: #fff;
     text-align: center; }
