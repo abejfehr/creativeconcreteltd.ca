@@ -104,6 +104,11 @@ body {
     body #header a:hover {
       color: #fff;
       font-weight: normal; }
+    body #header table.service-list > tbody > tr > td {
+      border: 0;
+      padding: 3px 18px;
+      font-size: large;
+      font-weight: 300; }
   body #gallery {
     background-color: #fff;
     text-align: center; }
