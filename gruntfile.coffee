@@ -13,7 +13,14 @@ module.exports = (grunt) ->
         ]
 
     image_resize:
-      dist:
+      full_to_hi_res:
+        options:
+          width: 1600
+          quality: 0.8
+          overwrite: true
+        src: 'images/full-images/*.jpg'
+        dest: 'images/hi-res/'
+      hi_res_to_thumb:
         options:
           width: 200
           height: 130
