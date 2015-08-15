@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,UAAM;EACN,IAAI,EAAC,GAAG;EACR,KAAK,EAAC,GAAG",
+"sources": ["scss/responsive.scss"],
+"names": [],
+"file": "responsive.css"
+}
