@@ -36,7 +36,7 @@
     $scope.cost = null;
 
     $scope.calculate = function() {
-      $scope.litres = $scope.loadSize * $scope.binder * angular.fromJson($scope.selectedType).value;
+      $scope.litres = Math.round($scope.loadSize * $scope.binder * angular.fromJson($scope.selectedType).value * 100)/100;
       $scope.cost = Math.round(($scope.litres * $scope.pmt * 100))/100;
     };
 
