@@ -44,7 +44,7 @@
         </md-input-container>
         <md-input-container flex="">
           <label>PMT</label>
-          <input ng-model="pmt" ng-change="calculate()"> <!-- pattern="^\d+(\.|\,)\d{2}$"> -->
+          <input ng-model="pmt" ng-change="calculate()"><!-- pattern="^\d+(\.|\,)\d{2}$"> -->
         </md-input-container>
         <md-input-container flex="">
           <label>Quality</label>
@@ -55,7 +55,10 @@
       </div>
 
       <div layout="">
-          <p ng-if="cost" style="font-size: 15vw; text-align: center; width: 100%">{{cost}}</p>
+        <p ng-if="cost" style="font-size: 15vw; text-align: center; width: 100%; margin: 5vh 0 1vh;">${{cost}}</p>
+      </div>
+      <div layout="">
+        <p ng-if="litres" style="font-size: 10vw; text-align: center; width: 100%; margin: 1vh 0 5vh;">{{litres}} litres</p>
       </div>
 
     </md-content>
