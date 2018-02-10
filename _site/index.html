@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <!-- Open Sans -->
+    <!-- Roboto -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
 
     <!-- Main Stylesheet -->
@@ -16,35 +16,14 @@
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="/css/responsive.css" media="all and (max-width: 1100px)" />
 
-    <!-- Magnific Stylesheet -->
-    <link rel="stylesheet" href="/css/magnific-popup.css" />
-
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-    <!-- Scrolly -->
-    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!-- Skel JS -->
     <script src="/js/skel.min.js"></script>
 
     <!-- Magnific responsive lightbox plugin -->
     <script src="/js/jquery.magnific-popup.min.js"></script>
-
-    <!-- Init script for the site -->
-    <script src="/js/init.js"></script>
-
-    <!-- Google Analytics Tracking Code -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-61894354-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
 
     <style>
     .icon {
@@ -250,5 +229,68 @@
       </div>
     </section>
 
+    <script type="text/javascript">
+
+    /* Google Analytics */
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61894354-1', 'auto');
+    ga('send', 'pageview');
+
+    /* Scrolly */
+    (function(e){var t="click.scrolly";e.fn.scrolly=function(r,i){var s=e(this);return r||(r=1e3),i||(i=0),s.off(t).on(t,function(t){var n,s,o,u=e(this),a=u.attr("href");a.charAt(0)=="#"&&a.length>1&&(n=e(a)).length>0&&(s=n.offset().top,u.hasClass("scrolly-centered")?o=s-(e(window).height()-n.outerHeight())/2:(o=Math.max(s,0),i&&(typeof i=="function"?o-=i():o-=i)),t.preventDefault(),e("body,html").stop().animate({scrollTop:o-60},r,"swing"))}),s}})(jQuery);
+
+    /* Website init */
+    (function($) {
+
+      $(function() {
+        var	$window = $(window);
+        var $body = $('body');
+
+        // Scrolly links.
+        $('.scrolly').scrolly();
+
+        // Gallery images
+        $('#gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: {
+            enabled: true
+          }
+        });
+
+        $('.gallery-thumb').on('click', function(event) {
+          ga('send', 'event', 'button', 'click', 'gallery-thumbs', $(this).attr('href'));
+        });
+
+        $('.logix-link').on('click', function(event) {
+          ga('send', 'event', 'button', 'click', 'outbound-links', 'logix');
+        });
+      });
+    })(jQuery);
+
+    var sendEmail = function() {
+      $.ajax({
+        url: "//formspree.io/henry@creativeconcreteltd.ca",
+        method: "POST",
+        data: {
+          _replyto: $("input[name='_replyto']").val(),
+          message: $("textarea[name='message']").val(),
+          _subject: $("select[name='_subject']").val(),
+          _gotcha: $("input[name='_gotcha']").val()
+        },
+        dataType: "json"
+      });
+
+      // Clear the fields after it's been sent
+      alert('Your message was sent!');
+      $("input[name='_replyto']").val('');
+      $("textarea[name='message']").val('');
+      $("select[name='_subject']").val('');
+      $("input[type='button']").attr('disabled', true);
+    };
+    </script>
   </body>
 </html>
