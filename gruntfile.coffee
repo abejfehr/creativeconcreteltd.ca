@@ -44,7 +44,7 @@ module.exports = (grunt) ->
     watch:
       sass:
         files: '**/*.scss'
-        tasks: ['sass', 'image_resize']
+        tasks: ['sass']
 
 
   grunt.loadNpmTasks 'grunt-contrib-sass'

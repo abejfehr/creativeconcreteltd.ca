@@ -56,15 +56,3 @@ var sendEmail = function() {
   $("select[name='_subject']").val('');
   $("input[type='button']").attr('disabled', true);
 };
-
-jQuery(document).scroll(function() {
-    if (jQuery(this).scrollTop() > 175) {
-        jQuery('#menu').css('position','fixed');
-        jQuery('#menu').css('top','0');
-    }
-    else {
-        jQuery('#menu').css('position','relative');
-        jQuery('#menu').css('top','');
-    }
-});
-
