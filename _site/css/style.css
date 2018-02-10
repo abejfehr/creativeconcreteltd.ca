@@ -90,7 +90,7 @@ body {
       font-weight: 100;
       font-size: 12pt;
       padding: 5px 15px;
-      margin: 10px;
+      margin: 30px;
       border: 2px solid #3f3f3f; }
     body #header label {
       color: #ccc;
@@ -103,11 +103,6 @@ body {
     body #header a:hover {
       color: #fff;
       font-weight: normal; }
-    body #header table.service-list > tbody > tr > td {
-      border: 0;
-      padding: 3px 18px;
-      font-size: large;
-      font-weight: 300; }
   body #gallery {
     background-color: #fff;
     text-align: center; }
