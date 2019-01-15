@@ -1,5 +1,5 @@
 # Ignore the node modules
 node_modules
 
-# Ignore the full sized images
-images/full-images
+# The built site
+_site
