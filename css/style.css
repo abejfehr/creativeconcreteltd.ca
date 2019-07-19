@@ -122,7 +122,7 @@ body {
       height: 130px;
       overflow: hidden;
       border-radius: 5px; }
-    body #gallery img {
+    body #gallery li img {
       width: 200px; }
     body #gallery button {
       background-color: rgba(85, 85, 85, 0.8);
