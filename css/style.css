@@ -187,13 +187,9 @@ body #gallery button {
 body #credits {
   padding: 50px 0;
   background-color: #555;
-  color: #999;
+  color: #A6A6A6;
   box-shadow: inset 1px 7px 26px 0px #2e2e2e;
   text-align: center;
-}
-
-body #credits a {
-  color: #888;
 }
 
 body .container {
