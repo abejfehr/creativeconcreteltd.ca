@@ -390,11 +390,11 @@
             <div class="six columns">
               <label for="email">Your email</label>
               <input class="u-full-width" name="_replyto" type="email"
-                placeholder="your@email.com">
+                id="email" placeholder="your@email.com">
             </div>
             <div class="six columns">
-              <label for="exampleRecipientInput">Reason for contacting</label>
-              <select name="_subject" class="u-full-width">
+              <label for="subject">Reason for contacting</label>
+              <select name="_subject" id="subject" class="u-full-width">
                 <option value="quote">Quote</option>
                 <option value="question">Question</option>
                 <option value="other">Other</option>
@@ -403,7 +403,7 @@
           </div>
           <label for="message">Message</label>
           <textarea class="u-full-width" placeholder="Hi Henry..."
-            name="message"></textarea>
+            name="message" id="message"></textarea>
           <input type="text" name="_gotcha" style="display:none" />
           <input class="button-primary" type="button" value="Submit"
             onclick="sendEmail();" />
