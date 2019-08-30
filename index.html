@@ -47,7 +47,7 @@
       <div id="menu">
         <div class="container">
           <ul style="float:right;">
-            <li><a href="#about">about</a></li>
+            <li><a href="#about" class="scrolly">about</a></li>
             <li><a href="#gallery" class="scrolly">gallery</a></li>
             <li><a href="#contact" class="scrolly">contact</a></li>
           </ul>
@@ -429,24 +429,41 @@
       </div>
     </section>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript">
 
-    /* Scrolly */
-    (function(e){var t="click.scrolly";e.fn.scrolly=function(r,i){var s=e(this);return r||(r=1e3),i||(i=0),s.off(t).on(t,function(t){var n,s,o,u=e(this),a=u.attr("href");a.charAt(0)=="#"&&a.length>1&&(n=e(a)).length>0&&(s=n.offset().top,u.hasClass("scrolly-centered")?o=s-(e(window).height()-n.outerHeight())/2:(o=Math.max(s,0),i&&(typeof i=="function"?o-=i():o-=i)),t.preventDefault(),e("body,html").stop().animate({scrollTop:o-60},r,"swing"))}),s}})(jQuery);
+    var scrollyElements = document.querySelectorAll('.scrolly') || [];
+    scrollyElements.forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // prep
+        var anchor = e.target.getAttribute('href');
+
+        // scroll to the element
+        var element = document.querySelector(anchor)
+        var target = document.querySelector(anchor) || document.querySelector("a[name=" + anchor.split('#')[1] +  "]");
+        window.scroll({
+          top: target.getBoundingClientRect().top,
+          behavior: 'smooth',
+        })
+
+        // update the hash
+        if(history.pushState) {
+          history.pushState(null, null, anchor);
+        }
+        else {
+          location.hash = anchor;
+        }
+      })
+    });
 
     /* Website init */
     (function($) {
 
       $(function() {
-        var	$window = $(window);
-        var $body = $('body');
-
-        // Scrolly links.
-        $('.scrolly').scrolly();
-
         // Gallery images
         $('#gallery').magnificPopup({
           delegate: 'a',
