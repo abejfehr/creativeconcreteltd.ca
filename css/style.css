@@ -196,10 +196,10 @@ body .container {
   max-width: 850px;
 }
 
-.button-primary {
+form .button-primary.submit-button.wow {
   background-color: #147390;
 }
 
 .call-link {
-  background-color: #147390;
+  color: #147390;
 }
