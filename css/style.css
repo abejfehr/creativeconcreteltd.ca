@@ -117,7 +117,7 @@ body #header {
 }
 
 body #header button {
-  background-color: rgba(85, 85, 85, 0.8);
+  background-color: #757575;
   color: #fff;
   height: 50px;
   text-transform: none;
@@ -173,7 +173,7 @@ body #gallery li img {
 }
 
 body #gallery button {
-  background-color: rgba(85, 85, 85, 0.8);
+  background-color: #757575;
   color: #fff;
   height: 50px;
   text-transform: none;
@@ -194,4 +194,12 @@ body #credits {
 
 body .container {
   max-width: 850px;
+}
+
+.button-primary {
+  background-color: #147390;
+}
+
+.call-link {
+  background-color: #147390;
 }
