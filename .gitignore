@@ -1,5 +1,4 @@
-# Ignore the node modules
 node_modules
-
-# The built site
+# the built site files
 _site
+.DS_Store
