@@ -218,3 +218,14 @@ form .button-primary.submit-button.wow:focus {
 .call-link {
   color: #147390;
 }
+
+.hide-accessibly {
+  background-image: url(/the_img.png); /* shows image */
+  height: 100px; /* be sure to set height & width */
+  width: 600px;
+
+  /* Hide the text. */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
