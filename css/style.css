@@ -19,13 +19,9 @@ body section {
   padding: 65px;
 }
 
-body section h1 {
+body section h2 {
   text-align: center;
   margin-bottom: 65px;
-}
-
-body section button {
-  margin: 35px 10px 10px 10px;
 }
 
 body nav {
@@ -115,23 +111,6 @@ body #header {
   padding-top: 380px;
 }
 
-body #header button {
-  background-color: #757575;
-  color: #fff;
-  height: 50px;
-  text-transform: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 12pt;
-  padding: 5px 15px;
-  margin: 30px;
-  border: 2px solid #3f3f3f;
-}
-
-body #header button:focus {
-  border: 2px solid orange;
-}
-
 body #header label {
   color: #ccc;
   font-weight: lighter;
@@ -140,7 +119,6 @@ body #header label {
 
 body #header a {
   color: #fff;
-  display: inline;
   text-decoration: none;
 }
 
@@ -165,30 +143,56 @@ body #gallery li {
   display: inline-block;
   padding: 0;
   margin: 4px;
-  width: 200px;
-  height: 130px;
   overflow: hidden;
-  border-radius: 5px;
 }
 
 body #gallery li img {
   width: 200px;
 }
 
-body #gallery button {
+.cta-button {
+  display: inline-block;
+  margin: 35px 10px 10px 10px;
+  padding: 10px;
+  display: inline-block;
   background-color: #757575;
   color: #fff;
-  height: 50px;
   text-transform: none;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+  text-decoration: none;
+  border-radius: 5px;
   font-size: 12pt;
-  padding: 5px 15px;
+  padding: 15px 25px;
   border: 2px solid #3f3f3f;
 }
 
-body #gallery button {
+.cta-button:focus,
+.cta-button:hover {
   border: 2px solid orange;
+  color: orange;
+}
+
+body #gallery .gallery-thumb {
+  border: 2px solid transparent;
+  padding: unset;
+  margin: unset;
+  height: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+body #gallery .gallery-thumb img {
+  border-radius: 4px;
+}
+
+body #gallery .gallery-thumb:focus {
+  border: 2px solid black;
 }
 
 body #credits {
@@ -205,6 +209,10 @@ body .container {
 
 form .button-primary.submit-button.wow {
   background-color: #147390;
+}
+
+form .button-primary.submit-button.wow:focus {
+  border: 2px solid black;
 }
 
 .call-link {
