@@ -135,6 +135,10 @@ body #gallery {
 body #gallery ul {
   list-style-type: none;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 4250px;
   margin: 0;
   padding: 0;
 }
@@ -143,6 +147,7 @@ body #gallery li {
   display: inline-block;
   padding: 0;
   margin: 4px;
+  width: 200px;
   overflow: hidden;
 }
 
@@ -182,7 +187,7 @@ body #gallery .gallery-thumb {
   align-items: center;
   justify-content: center;
   width: 200px;
-  height: 130px;
+  /* height: 130px; */
   overflow: hidden;
   border-radius: 5px;
 }
