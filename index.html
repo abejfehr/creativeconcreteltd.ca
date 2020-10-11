@@ -22,9 +22,15 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
-      href="/css/responsive.css"
+      href="/css/md.css"
       media="all and (max-width:
       1100px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/sm.css"
+      media="all and (max-width:
+      600px)"
     />
     <link
       rel="stylesheet"
@@ -1124,7 +1130,7 @@
         </div>
       </header>
       <div class="container">
-        <form>
+        <form action="https://formspree.io/f/xgepojbo" method="POST">
           <div class="row">
             <div class="six columns">
               <label for="email">Your email</label>
@@ -1153,12 +1159,9 @@
             id="message"
           ></textarea>
           <input type="text" name="_gotcha" style="display: none" />
-          <input
-            class="button-primary submit-button wow"
-            type="button"
-            value="Submit"
-            onclick="sendEmail();"
-          />
+          <button class="button-primary submit-button wow" type="submit">
+            Submit
+          </button>
         </form>
         <p class="center">
           You can also call Henry today at
@@ -1214,26 +1217,38 @@
         });
       })(jQuery);
 
-      var sendEmail = function () {
-        $.ajax({
-          url: "//formspree.io/henry@creativeconcreteltd.ca",
-          method: "POST",
-          data: {
-            _replyto: $("input[name='_replyto']").val(),
-            message: $("textarea[name='message']").val(),
-            _subject: $("select[name='_subject']").val(),
-            _gotcha: $("input[name='_gotcha']").val(),
-          },
-          dataType: "json",
-        });
+      var form = document.querySelector("form");
 
-        // Clear the fields after it's been sent
+      // Success and Error functions for after the form is submitted
+      function success() {
+        form.reset();
         alert("Your message was sent!");
-        $("input[name='_replyto']").val("");
-        $("textarea[name='message']").val("");
-        $("select[name='_subject']").val("");
-        $("input[type='button']").attr("disabled", true);
-      };
+      }
+
+      function error() {
+        status.innerHTML = "Oops! There was a problem.";
+      }
+
+      // handle the form submission event
+      form.addEventListener("submit", (ev) => {
+        ev.preventDefault();
+        const data = {
+          _replyto: $("input[name='_replyto']").val(),
+          message: $("textarea[name='message']").val(),
+          _subject: $("select[name='_subject']").val(),
+          _gotcha: $("input[name='_gotcha']").val(),
+        };
+        fetch(form.action, {
+          method: form.method,
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then(success)
+          .catch(error);
+      });
     </script>
   </body>
 </html>

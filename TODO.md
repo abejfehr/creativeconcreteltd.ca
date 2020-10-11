@@ -1,6 +1,8 @@
-- use the new contact form
+✓ change gallery to be masonry
+✓ fix gallery on mobile
+✓ use the new contact form
+
 - the form needs a description
 - icons need alt text
 - remove jquery
-- change gallery to be masonry
 - remove skeleton
