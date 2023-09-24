@@ -1,8 +1,8 @@
-✓ change gallery to be masonry
-✓ fix gallery on mobile
-✓ use the new contact form
-
+- the header could be a lot nicer
+- some images are missing alt text, or have undecriptive names/alt text (for SEO)
+- we should probably remove shitty pictures (quality over quantity)
+- gallery would be nice if it was full width on big screens
 - the form needs a description
-- icons need alt text
+- cta's kinda suck ("interested?")
 - remove jquery
 - remove skeleton
