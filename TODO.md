@@ -3,6 +3,10 @@
 - we should probably remove shitty pictures (quality over quantity)
 - gallery would be nice if it was full width on big screens
 - the form needs a description
+  - not sure what this means exactly
 - cta's kinda suck ("interested?")
-- remove jquery
-- remove skeleton
+- use webp for the images
+  - or png8
+
+- layout idea:
+  - basically a full page gallery that scrolls, and a sidebar that has business info and a contact form
