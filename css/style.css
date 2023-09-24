@@ -134,20 +134,33 @@ body #gallery {
 
 body #gallery ul {
   list-style-type: none;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-height: 4250px;
-  margin: 0;
-  padding: 0;
+  columns: 3;
+  column-gap: 8px;
+  /* text-align: center; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* max-height: 4250px; */
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+@media screen and (max-width: 800px) {
+  img {
+    max-width: 100%;
+  }
+  body #gallery ul {
+    columns: 1;
+  }  
 }
 
 body #gallery li {
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
   padding: 0;
-  margin: 4px;
   overflow: hidden;
+  margin: unset;
+  margin-bottom: 8px;
 }
 
 .cta-button {
@@ -174,21 +187,26 @@ body #gallery li {
 }
 
 body #gallery .gallery-thumb {
-  border: 2px solid transparent;
-  padding: unset;
+  /* display: inline-block; */
+  display: flex;
+  position: relative;
+  /* padding: unset;
   margin: unset;
   height: unset;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 200px;
+  justify-content: center; */
+  /* width: 200px; */
   /* height: 130px; */
+  width: 100%;
   overflow: hidden;
   border-radius: 5px;
 }
 
 body #gallery .gallery-thumb img {
   border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
 }
 
 body #gallery .gallery-thumb:focus {

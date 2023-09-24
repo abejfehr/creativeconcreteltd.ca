@@ -11,10 +11,10 @@ body #header {
 body #menuSpacing {
   height: 0;
 }
-body #gallery li,
+/* body #gallery li,
 body #gallery img {
   height: auto;
 }
 body #gallery ul {
   max-height: 5540px;
-}
+} */
