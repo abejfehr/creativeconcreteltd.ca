@@ -1,12 +1,17 @@
-- the header could be a lot nicer
-- some images are missing alt text, or have undecriptive names/alt text (for SEO)
-- we should probably remove shitty pictures (quality over quantity)
-- gallery would be nice if it was full width on big screens
-- the form needs a description
-  - not sure what this means exactly
-- cta's kinda suck ("interested?")
-- use webp for the images
-  - or png8
+redesign-2025
 
-- layout idea:
-  - basically a full page gallery that scrolls, and a sidebar that has business info and a contact form
+- gallery
+  - make sure the images are rightsized
+  - remove all _ and - from image titles
+  - make the stories contain all gallery images
+- contact
+  - wire up a contact form
+- "header"
+  - make a CC-only logo for mobile
+  - move the contact button to the top on mobile
+
+ideas
+- put the weather on the page
+- investigate downloading a contact card (vcard?)
+- add image categorization
+- explaining what certain services are
