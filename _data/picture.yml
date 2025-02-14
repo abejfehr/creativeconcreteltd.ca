@@ -1,0 +1,14 @@
+# _data/picture.yml
+
+media_queries:
+  mobile: "max-width: 500px"
+  tablet: "max-width: 800px"
+
+presets:
+  default:
+    widths: [500, 800] # The available widths for the images
+    formats: [webp, original]
+    sizes:
+      mobile: 500px # For screens 500px or smaller, images will be 500px wide
+      tablet: 800px # For screens 800px or smaller, images will be 800px wide
+    size: 500px # Default size when not constrained by media query

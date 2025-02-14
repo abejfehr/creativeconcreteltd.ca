@@ -13,8 +13,12 @@
     <title>
       Creative Concrete Ltd - Concrete contractor in Winkler and Morden area
     </title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Creative Concrete" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,6 +30,10 @@
         --cobalt-blue: #1446a0;
         --cc-blue: #0b4cc3;
         --ghost-white: #f0eff4;
+      }
+
+      ::backdrop {
+        background: rgba(0, 0, 0, 0.4);
       }
 
       * {
@@ -40,7 +48,7 @@
 
       body {
         display: flex;
-        font-family: "Inter", serif;
+        font-family: "Inter", sans-serif;
       }
 
       header {
@@ -103,6 +111,30 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 10px;
+        transition: background 3s ease-in-out;
+      }
+
+      .gallery a:hover {
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 10%,
+          rgba(0, 0, 0, 0.2) 20%
+        );
+      }
+
+      .gallery a ul {
+        padding: 0;
+        margin: 5px 0;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        background-color: gray;
+        padding: 3px;
+        border-radius: 3px;
       }
 
       .gallery a p {
@@ -115,7 +147,7 @@
         justify-content: center;
       }
 
-      .quote-btn {
+      .blue-btn {
         background-color: var(--cc-blue);
         font-weight: bold;
         font-size: 15px;
@@ -125,14 +157,81 @@
         border: none;
       }
 
-      .quote-btn:hover {
+      .blue-btn:hover {
         cursor: pointer;
+      }
+
+      dialog {
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        min-width: 400px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      dialog .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        border: none;
+        background: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: gray;
+      }
+
+      dialog .close-btn:hover {
+        color: black;
+      }
+
+      dialog h2 {
+        margin-top: 0;
+      }
+
+      dialog div {
+        margin-bottom: 20px;
+      }
+
+      dialog label {
+        display: block;
+        font-size: 14px;
+      }
+
+      dialog input {
+        font-family: inherit;
+        font-size: inherit;
+        margin-top: 10px;
+        padding: 5px;
+      }
+
+      dialog textarea {
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        margin-top: 10px;
+        padding: 5px;
+      }
+
+      .weather {
+        color: #333;
+        font-size: 13px;
       }
 
       /* Small-ish desktop screens */
       @media screen and (max-width: 1200px) {
         .gallery > div {
           width: 50%;
+        }
+      }
+
+      /* Small desktop screens */
+      @media screen and (max-width: 1000px) {
+        main {
+          flex: 1;
+        }
+
+        .gallery > div {
+          width: 100%;
         }
       }
 
@@ -175,16 +274,17 @@
         <li>Furniture</li>
         <li>Steps</li>
         <li>Patios</li>
-        <li>Pool Decks</li>
+        <li>Pool decks</li>
         <li>Driveways</li>
-        <li>Garage Floors</li>
-        <li>Shop Floors</li>
-        <li>Basement Floors</li>
-        <li>Skid Steer Work</li>
-        <li>Cast-in-place Piles</li>
-        <li>Grade Beams</li>
-        <li>Retaining Walls</li>
-        <li>ICF Foundations</li>
+        <li>Garage floors</li>
+        <li>Shop floors</li>
+        <li>Basement floors</li>
+        <li>Skid Steer work</li>
+        <li>Clean and resealing</li>
+        <li>Sand wash finish</li>
+        <li>Grade beams</li>
+        <li>Retaining walls</li>
+        <li>ICF foundations</li>
         <li>and more!</li>
       </ul>
 
@@ -198,24 +298,60 @@
       <label>Phone:</label> <a href="tel:+12043320492">(204) 332-0492</a>
 
       <div class="quote-btn-container">
-        <button class="quote-btn">Get a free quote</button>
+        <button class="quote-btn blue-btn">Get a free quote</button>
       </div>
+
+      <p class="weather"></p>
     </header>
     <main>
       <section class="gallery">
         {% for story in site.data.stories %}
         <div>
-          <img
-            src="images/originals/{{ story.images[0] }}"
-            alt="{{ story.title }}"
-          />
+          {% picture images/originals/{{ story.images[0] }} 1:1 loading="lazy"
+          --alt {{ story.description }} %}
           <a data-fslightbox href="images/originals/{{ story.images[0] }}">
-            <p>{{ story.title }} →</p>
+            <ul>
+              {% for tag in story.tags %}
+              <li class="tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+            <p>{{ story.title }} ➔</p>
           </a>
         </div>
         {% endfor %}
       </section>
     </main>
+    <dialog>
+      <button class="close-btn">×</button>
+      <h2>Quote request</h2>
+      <form action="https://formspree.io/f/xgepojbo" method="POST">
+        <div>
+          <label for="email">Your email</label>
+          <input
+            name="_replyto"
+            type="email"
+            id="email"
+            placeholder="your@email.com"
+            required
+            autofocus
+          />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            placeholder="Hi Henry..."
+            name="message"
+            id="message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display: none" />
+        <div class="quote-btn-container">
+          <button class="blue-btn" type="submit">Submit message</button>
+        </div>
+      </form>
+    </dialog>
     <script type="application/ld+json">
       {
         "@context": "http://www.schema.org",
@@ -232,6 +368,9 @@
         "telephone": "+1 (204) 332-0492"
       }
     </script>
+    <script type="text/javascript" src="weather.js"></script>
+    <script type="text/javascript" src="quote.js"></script>
+    <!-- <script type="text/javascript" src="cclightbox.js"></script> -->
     <script type="text/javascript" src="fslightbox.js"></script>
     <script type="text/javascript"></script>
   </body>
