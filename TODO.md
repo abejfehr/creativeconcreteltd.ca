@@ -1,12 +1,31 @@
-- the header could be a lot nicer
-- some images are missing alt text, or have undecriptive names/alt text (for SEO)
-- we should probably remove shitty pictures (quality over quantity)
-- gallery would be nice if it was full width on big screens
-- the form needs a description
-  - not sure what this means exactly
-- cta's kinda suck ("interested?")
-- use webp for the images
-  - or png8
+redesign-2025
 
-- layout idea:
-  - basically a full page gallery that scrolls, and a sidebar that has business info and a contact form
+- "header"
+  - make a CC-only logo for mobile
+  - move the quote button to the top on mobile
+- press
+  - show the featured article in Build & Renovate
+- gallery
+  - custom lighbox
+    - escape should close the lightbox
+    - left and right arrows should go left and right
+  - show all images in the gallery lightbox
+    - indicate that there are >1 images on the image
+  - make sure the images are rightsized
+    - as in, downsized to the correct size
+  - remove all _ and - from image titles
+    - do this with Henry maybe
+  - make the image of the lit steps fade from night to day
+
+ideas
+- investigate downloading a contact card (vcard?)
+  - or using the share API to accomplish this
+- add image filtering / categorization
+- explaining what certain offered services are
+  - like that new kind of wash henry does
+- scale up the images when you hover on them
+- add stories' images into the lightboxes
+
+to get from henry
+- Build & Renovate article
+- few extra images

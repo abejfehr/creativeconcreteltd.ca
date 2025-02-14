@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Residential and commercial concrete
+      contractor for services including stamped concrete sidewalks, driveways,
+      decorative countertops and more. Serving Winkler, Morden, Altona, Morris,
+      Carman and the rest of the Pembina Valley."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Creative Concrete Ltd - Concrete contractor in Winkler and Morden area
+    </title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Creative Concrete" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cobalt-blue: #1446a0;
+        --cc-blue: #0b4cc3;
+        --ghost-white: #f0eff4;
+      }
+
+      ::backdrop {
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        font-family: "Inter", sans-serif;
+      }
+
+      header {
+        background-color: var(--ghost-white);
+        flex: 1;
+        padding: 20px;
+        overflow-y: scroll;
+      }
+
+      .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      main {
+        flex: 2;
+        overflow-y: scroll;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .gallery > div {
+        width: 33.33%;
+        /* display: block; */
+      }
+
+      .gallery > div {
+        position: relative;
+        aspect-ratio: 1;
+      }
+
+      .gallery img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+
+      .gallery a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 10%,
+          rgba(0, 0, 0, 0) 20%
+        );
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+        transition: background 3s ease-in-out;
+      }
+
+      .gallery a:hover {
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 10%,
+          rgba(0, 0, 0, 0.2) 20%
+        );
+      }
+
+      .gallery a ul {
+        padding: 0;
+        margin: 5px 0;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        background-color: gray;
+        padding: 3px;
+        border-radius: 3px;
+      }
+
+      .gallery a p {
+        margin: 0;
+        font-weight: bold;
+      }
+
+      .quote-btn-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .blue-btn {
+        background-color: var(--cc-blue);
+        font-weight: bold;
+        font-size: 15px;
+        color: white;
+        padding: 20px;
+        border-radius: 3px;
+        border: none;
+      }
+
+      .blue-btn:hover {
+        cursor: pointer;
+      }
+
+      dialog {
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        min-width: 400px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      dialog .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        border: none;
+        background: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: gray;
+      }
+
+      dialog .close-btn:hover {
+        color: black;
+      }
+
+      dialog h2 {
+        margin-top: 0;
+      }
+
+      dialog div {
+        margin-bottom: 20px;
+      }
+
+      dialog label {
+        display: block;
+        font-size: 14px;
+      }
+
+      dialog input {
+        font-family: inherit;
+        font-size: inherit;
+        margin-top: 10px;
+        padding: 5px;
+      }
+
+      dialog textarea {
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        margin-top: 10px;
+        padding: 5px;
+      }
+
+      .weather {
+        color: #333;
+        font-size: 13px;
+      }
+
+      /* Small-ish desktop screens */
+      @media screen and (max-width: 1200px) {
+        .gallery > div {
+          width: 50%;
+        }
+      }
+
+      /* Small desktop screens */
+      @media screen and (max-width: 1000px) {
+        main {
+          flex: 1;
+        }
+
+        .gallery > div {
+          width: 100%;
+        }
+      }
+
+      /* Small devices (phones, etc) */
+      @media screen and (max-width: 800px) {
+        body {
+          flex-direction: column;
+        }
+
+        header {
+          overflow-y: unset;
+        }
+
+        main {
+          overflow-y: unset;
+        }
+
+        .gallery > div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img width="220px" src="/images/logo.png" />
+        <!-- <img width="200px" src="/images/cc-only.png" /> -->
+        <!-- <h1>Creative Concrete</h1> -->
+      </div>
+      <p>
+        We're focused on making the most out of your concrete projects by
+        custom-making each project specifically for you.
+      </p>
+
+      <p>Services we offer:</p>
+
+      <ul>
+        <li>Countertops</li>
+        <li>Furniture</li>
+        <li>Steps</li>
+        <li>Patios</li>
+        <li>Pool decks</li>
+        <li>Driveways</li>
+        <li>Garage floors</li>
+        <li>Shop floors</li>
+        <li>Basement floors</li>
+        <li>Skid Steer work</li>
+        <li>Clean and resealing</li>
+        <li>Sand wash finish</li>
+        <li>Grade beams</li>
+        <li>Retaining walls</li>
+        <li>ICF foundations</li>
+        <li>and more!</li>
+      </ul>
+
+      <p>Serving the Winkler, Morden, Altona, Morris, and Carman region.</p>
+
+      <label>Email:</label>
+      <a href="mailto:henry@creativeconcreteltd.ca"
+        >henry@creativeconcreteltd.ca</a
+      >
+      <br />
+      <label>Phone:</label> <a href="tel:+12043320492">(204) 332-0492</a>
+
+      <div class="quote-btn-container">
+        <button class="quote-btn blue-btn">Get a free quote</button>
+      </div>
+
+      <p class="weather"></p>
+    </header>
+    <main>
+      <section class="gallery">
+        {% for story in site.data.stories %}
+        <div>
+          {% picture images/originals/{{ story.images[0] }} 1:1 loading="lazy"
+          --alt {{ story.description }} %}
+          <a data-fslightbox href="images/originals/{{ story.images[0] }}">
+            <ul>
+              {% for tag in story.tags %}
+              <li class="tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+            <p>{{ story.title }} ➔</p>
+          </a>
+        </div>
+        {% endfor %}
+      </section>
+    </main>
+    <dialog>
+      <button class="close-btn">×</button>
+      <h2>Quote request</h2>
+      <form action="https://formspree.io/f/xgepojbo" method="POST">
+        <div>
+          <label for="email">Your email</label>
+          <input
+            name="_replyto"
+            type="email"
+            id="email"
+            placeholder="your@email.com"
+            required
+            autofocus
+          />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            placeholder="Hi Henry..."
+            name="message"
+            id="message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display: none" />
+        <div class="quote-btn-container">
+          <button class="blue-btn" type="submit">Submit message</button>
+        </div>
+      </form>
+    </dialog>
+    <script type="application/ld+json">
+      {
+        "@context": "http://www.schema.org",
+        "@type": "GeneralContractor",
+        "name": "Creative Concrete Ltd",
+        "url": "https://www.creativeconcreteltd.ca",
+        "image": "https://www.creativeconcreteltd.ca/images/hi-res/driveway.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Winkler",
+          "addressRegion": "MB",
+          "addressCountry": "Canada"
+        },
+        "telephone": "+1 (204) 332-0492"
+      }
+    </script>
+    <script type="text/javascript" src="weather.js"></script>
+    <script type="text/javascript" src="quote.js"></script>
+    <!-- <script type="text/javascript" src="cclightbox.js"></script> -->
+    <script type="text/javascript" src="fslightbox.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>
