@@ -1,3 +1,4 @@
 node_modules
 # the built site files
+_site
 .DS_Store

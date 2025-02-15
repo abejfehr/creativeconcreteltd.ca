@@ -11,11 +11,8 @@ redesign-2025
     - left and right arrows should go left and right
   - show all images in the gallery lightbox
     - indicate that there are >1 images on the image
-  - make sure the images are rightsized
-    - as in, downsized to the correct size
-  - remove all _ and - from image titles
-    - do this with Henry maybe
   - make the image of the lit steps fade from night to day
+  - put the new images in that I got emailed
 
 ideas
 - investigate downloading a contact card (vcard?)
@@ -24,8 +21,3 @@ ideas
 - explaining what certain offered services are
   - like that new kind of wash henry does
 - scale up the images when you hover on them
-- add stories' images into the lightboxes
-
-to get from henry
-- Build & Renovate article
-- few extra images
