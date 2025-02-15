@@ -165,6 +165,10 @@
         cursor: pointer;
       }
 
+      .contact-link {
+        display: none;
+      }
+
       dialog {
         border: none;
         border-radius: 10px;
@@ -301,7 +305,9 @@
       <br />
       <label>Phone:</label> <a href="tel:+12043320492">(204) 332-0492</a>
       <br />
-      <a href="/henry.vcf" download="Henry.vcf">Add to contacts</a>
+      <a class="contact-link" href="/henry.vcf" download="Henry.vcf"
+        >Add to contacts</a
+      >
 
       <div class="quote-btn-container">
         <button class="quote-btn blue-btn">Get a free quote</button>
@@ -376,6 +382,7 @@
     </script>
     <script type="text/javascript" src="weather.js"></script>
     <script type="text/javascript" src="quote.js"></script>
+    <script type="text/javascript" src="contact.js"></script>
     <!-- <script type="text/javascript" src="cclightbox.js"></script> -->
     <script type="text/javascript" src="fslightbox.js"></script>
     <script type="text/javascript"></script>
