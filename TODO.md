@@ -12,6 +12,23 @@ redesign-2025
     - left and right arrows should go left and right
   - make the image of the lit steps fade from night to day
   - put the new images in that I got emailed/whatsapped
+    - from email
+      - website pics
+        - downloaded
+      - website
+        - downloaded
+      - mores
+        - downloaded
+      - sfgh
+        - downloaded
+      - nexty
+        - downloaded
+      - pool
+        - downloaded
+    - from whatsapp
+      - group 1 (25 pictures)
+      - group 2 (5 pictures)
+      - group 3 (3 pictures)
 
 ideas
 - add image filtering / categorization

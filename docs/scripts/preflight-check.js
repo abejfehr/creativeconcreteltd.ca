@@ -1,6 +1,3 @@
-// TODO: Warn against images in originals/ folder that are too small
-// TODO: Warn on images with non title case titles
-// TODO: Warn on images with _ or - in titles
 const { parse } = require("yaml");
 const { readFileSync } = require("fs");
 const { exit } = require("process");

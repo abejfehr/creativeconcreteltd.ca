@@ -6,7 +6,8 @@
   "scripts": {
     "start": "open http://localhost:8000 && npx local-web-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preflight-check": "node ./scripts/preflight-check.js"
+    "preflight-check": "node ./scripts/preflight-check.js",
+    "rename-images": "node ./scripts/rename-images.js"
   },
   "repository": {
     "type": "git",
