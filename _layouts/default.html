@@ -340,12 +340,19 @@
       <section class="gallery">
         {% for story in site.data.stories %}
         <div>
-          {% for image in story.images %} {% if forloop.first %} {% picture
-          images/originals/{{ image }} 1:1 loading="lazy" --alt {{
-          story.description }} %} {% endif %}
+          {% for image in story.images %} {% assign ext = image | split: '.' |
+          last | downcase %} {% if forloop.first %} {% if ext == "gif" %}
+          <img
+            src="/images/gifs/{{ image }}"
+            alt="{{ story.description }}"
+            loading="lazy"
+          />
+          {% else %} {% picture images/originals/{{ image }} 1:1 loading="lazy"
+          --alt {{ story.description }} %} {% endif %} {% endif %}
+
           <a
             data-fslightbox
-            href="images/originals/{{ image }}"
+            href="{% if ext == 'gif' %}/images/gifs/{{ image }}{% else %}/images/originals/{{ image }}{% endif %}"
             style="{% if forloop.first %}{% else %}display: none;{% endif %}"
           >
             {% if forloop.first and story.images.size > 1 %}

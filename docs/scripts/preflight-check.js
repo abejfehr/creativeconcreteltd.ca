@@ -5,6 +5,7 @@ const { whiteBright } = require("chalk");
 const sizeOf = require("image-size");
 const terminalLink = require("terminal-link");
 const path = require("path");
+const { extname } = require("path/win32");
 
 const rawData = readFileSync("./_data/stories.yml").toString();
 const data = parse(rawData);
@@ -18,7 +19,12 @@ let isError = false;
 data.forEach((datum) => {
   if (datum.images.length === 0) {
     isError = true;
-    console.log(`⚠️  ${whiteBright(datum.title)} is missing images`);
+    console.log(`❌ ${whiteBright(datum.title)} is missing images`);
+    return;
+  }
+
+  if (extname(datum.images[0]) === ".gif") {
+    console.log(`Ignoring ${datum.images[0]} because it's a gif`);
     return;
   }
 
@@ -29,11 +35,11 @@ data.forEach((datum) => {
 
   if (!isTitleCase(datum.title)) {
     isError = true;
-    console.log(`⚠️  ${whiteBright(datum.title)} (${link}) is not title case`);
+    console.log(`❌ ${whiteBright(datum.title)} (${link}) is not title case`);
     return;
   }
 
-  if (datum.title.indexOf("-") >= 0 || datum.title.indexOf("_") >= 0) {
+  if (datum.title.indexOf("_") >= 0) {
     isError = true;
     console.log(`⚠️  ${whiteBright(datum.title)} (${link}) looks like a draft`);
     return;

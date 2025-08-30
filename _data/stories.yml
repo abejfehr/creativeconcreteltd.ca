@@ -1,3 +1,41 @@
+- title: Patio, planters, curbs, and steps with lights
+  description:
+  tags:
+    - patio
+    - steps
+    - curbs
+  images:
+    - vanderveen/overhead-shot-concrete-planters-steps-patio.jpg
+    - vanderveen/aerial-view-concrete-patio-with-curbs.jpg
+    - vanderveen/concrete-patio-planter-curbs.jpg
+    - vanderveen/concrete-steps-with-lights-patio.jpg
+    - vanderveen/concrete-porch-yard-planters-curbs.jpg
+    - concrete-curbing-and-steps-102-0.jpg
+    - concrete-curbing-and-steps-102-1.jpg
+    - concrete-curbing-and-steps-102-2.jpg
+    - concrete-curbing-and-steps-102-3.jpg
+    - concrete-curbing-and-steps-102-4.jpg
+    - concrete-curbing-and-steps-102-5.jpg
+- title: Stamped and coloured outdoor patio
+  description:
+  tags:
+    - patio
+    - coloured
+    - stamped
+  images:
+    - patio-with-diagonal-cuts/concrete-coloured-patio-diagonal-cuts.jpg
+    - patio-with-diagonal-cuts/concrete-patio-diagonal-cuts-coloured.jpg
+    - patio-with-diagonal-cuts/concrete-patio-diagonal-cuts.jpg
+    - patio-with-diagonal-cuts/concrete-sidewalk-coloured.jpg
+- title: Rustic island with concrete countertop
+  description:
+  tags:
+    - countertop
+    - live edge
+  images:
+    - virden-island/rustic-concrete-island-countertop-embedded-horseshoes-2.jpg
+    - virden-island/rustic-concrete-island-countertop-with-embedded-horseshoes.jpg
+    - virden-island/rustic-island-concrete-countertop.jpg
 - title: Outdoor patio with lights
   description: Patio lights outdoor decor stamped concrete live edge stepping
     stones with chairs
@@ -13,11 +51,20 @@
     - outdoor-patio-with-lights-0-3.jpg
 - title: Decorative concrete fireplace hearth
   description: fireplace mantel artistic
+  tags:
+    - decorative
   images:
     - decorative-concrete-fireplace-hearth-1-0.jpg
     - decorative-concrete-fireplace-hearth-1-1.jpg
     - decorative-concrete-fireplace-hearth-1-2.jpg
     - decorative-concrete-fireplace-hearth-1-3.jpg
+- title: Coloured and stamped steps with lights
+  description:
+  tags:
+    - steps
+    - exposed aggregate
+  images:
+    - steps.gif
 - title: Outdoor kitchen with concrete countertops
   description: Outdoor kitchen with concrete countertops
   tags:
@@ -781,7 +828,8 @@
     - wood-stamped-patio-91-0.jpg
 - title: Outdoor patio
   description: Outdoor patio
-  tags: []
+  tags:
+    - patio
   images:
     - outdoor-patio-92-0.jpg
 - title: Outdoor sidewalk with coloured border
@@ -875,20 +923,10 @@
   images:
     - stamped-concrete-patio-with-step-101-0.jpg
     - stamped-concrete-patio-with-step-101-1.jpg
-- title: Concrete curbing and steps
-  description: Concrete curbing and steps
-  tags:
-    - steps
-  images:
-    - concrete-curbing-and-steps-102-0.jpg
-    - concrete-curbing-and-steps-102-1.jpg
-    - concrete-curbing-and-steps-102-2.jpg
-    - concrete-curbing-and-steps-102-3.jpg
-    - concrete-curbing-and-steps-102-4.jpg
-    - concrete-curbing-and-steps-102-5.jpg
 - title: Coloured stucco planters
   description: Coloured stucco planters
-  tags: []
+  tags:
+    - coloured
   images:
     - coloured-stucco-planters-103-0.jpg
     - coloured-stucco-planters-103-1.jpg
