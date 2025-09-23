@@ -5,17 +5,48 @@
     - steps
     - curbs
   images:
+    # - vanderveen/v-1.jpeg contains people
+    # - vanderveen/v-2.jpeg too crooked
+    # - vanderveen/v-5.jpeg
+    # - vanderveen/v-6.jpeg
+    # - vanderveen/v-7.jpeg contains people
+    # - vanderveen/v-8.jpeg
+    # - vanderveen/v-11.jpeg
+    # - vanderveen/v-14.jpeg contains people
+    # - vanderveen/v-15.jpeg contains people
+    # - vanderveen/v-16.jpeg
+    # - vanderveen/v-18.jpeg
+    # - vanderveen/v-19.jpeg
+    # - vanderveen/v-22.jpeg
+    # - vanderveen/v-25.jpeg
+    # - vanderveen/v-26.jpeg
+    # - vanderveen/v-27.jpeg
+    # - vanderveen/v-29.jpeg
+    # - vanderveen/v-30.jpeg
+    - vanderveen/v-31.jpeg
+    - vanderveen/v-12.jpeg
+    # - vanderveen/v-10.jpeg
+    - vanderveen/v-9.jpeg
+    - vanderveen/v-4.jpeg
+    # - vanderveen/v-3.jpeg
+    - vanderveen/v-23.jpeg
+    # - vanderveen/v-24.jpeg
+    - vanderveen/v-13.jpeg
+    # - vanderveen/v-28.jpeg
+    - vanderveen/v-17.jpeg
+    - vanderveen/v-21.jpeg
+    - vanderveen/v-20.jpeg
     - vanderveen/overhead-shot-concrete-planters-steps-patio.jpg
     - vanderveen/aerial-view-concrete-patio-with-curbs.jpg
     - vanderveen/concrete-patio-planter-curbs.jpg
-    - vanderveen/concrete-steps-with-lights-patio.jpg
+    # - vanderveen/concrete-steps-with-lights-patio.jpg
     - vanderveen/concrete-porch-yard-planters-curbs.jpg
     - concrete-curbing-and-steps-102-0.jpg
     - concrete-curbing-and-steps-102-1.jpg
-    - concrete-curbing-and-steps-102-2.jpg
-    - concrete-curbing-and-steps-102-3.jpg
-    - concrete-curbing-and-steps-102-4.jpg
-    - concrete-curbing-and-steps-102-5.jpg
+    # - concrete-curbing-and-steps-102-2.jpg
+    # - concrete-curbing-and-steps-102-3.jpg
+    # - concrete-curbing-and-steps-102-4.jpg
+    # - concrete-curbing-and-steps-102-5.jpg
 - title: Stamped and coloured outdoor patio
   description:
   tags:

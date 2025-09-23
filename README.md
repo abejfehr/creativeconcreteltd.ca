@@ -11,3 +11,7 @@ A Single-page HTML website for my brother's concrete business.
 ## Image checks
 
 You can run `bun run preflight-check` to ensure that the images are big enough and have non-draft titles (titles with hyphens are a false positive for now)
+
+## Deployment
+
+The site is automatically deployed from the docs folder, which gets generated/committed automatically on commit hook.
