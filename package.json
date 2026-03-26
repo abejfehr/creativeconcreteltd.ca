@@ -23,6 +23,6 @@
     "chalk": "^4",
     "image-size": "^1.2.0",
     "terminal-link": "^2.0.0",
-    "yaml": "^2.7.0"
+    "yaml": "^2.8.3"
   }
 }
