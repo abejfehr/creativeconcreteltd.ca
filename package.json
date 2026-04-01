@@ -21,7 +21,7 @@
   "homepage": "https://github.com/abejfehr/creativeconcreteltd.ca",
   "dependencies": {
     "chalk": "^4",
-    "image-size": "^1.2.0",
+    "image-size": "^1.2.1",
     "terminal-link": "^2.0.0",
     "yaml": "^2.7.0"
   }
